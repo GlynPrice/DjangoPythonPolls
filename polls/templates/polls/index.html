@@ -1,0 +1,17 @@
+{% if listOfQuestions %}
+
+    Number of future questions are {{numNoFuture}}.<br />
+    Number of question with no choices are {{numNoChoices}}.<br />
+
+    These questions and questions deleted from the database are<br />
+    excluded from the following list.<br /> <br />
+
+    There are {{numQuestions}} questions, in {{orderType}} order:
+    <ul>
+    {% for q in listOfQuestions %}
+      <li><a href="{% url 'polls:details' q.id %}">{{q.id}} {{ q.question_text }} {{ q.pub_date }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No questions are available</p>
+{% endif %}

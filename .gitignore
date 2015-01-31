@@ -1,0 +1,8 @@
+*.pyc
+*.py~
+*.html~
+*.txt~
+*.tmp~
+*.log~
+*.dat~
+*.md~
